@@ -1,7 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    margin-top: 60px;
 }
 
 .center {
@@ -19,4 +18,73 @@ body {
 .img-medium {
     height: 200px;
 }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4a4a4a;
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.comment {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.commenter {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#comment_form {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+divde {
+    background-color: transparent;
+    display: none;
+}
+    
+span:hover + divde {
+    display: block;
+}
+body, html, main {
+    background:white;
+	height: 100%;
+}
+.container1{
+            min-width: 100%;
+            min-height: 100%;
+            color: black;
+	        background-size: cover;
+	        background-attachment: fixed;
+	        background-repeat: no-repeat;
+	        background-position: center center;
+            text-align:left;   
+            font-family: sans-serif;
+}
+.team{
+    background-image: url("http://thegreatindiantrio.in/wp-content/uploads/2015/07/india_logo_Y-310-angle.png");
+}
+.container1 {
+    min-height: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
 
