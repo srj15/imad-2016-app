@@ -1,0 +1,80 @@
+html { 
+   background: url(http://theartmad.com/wp-content/uploads/2015/07/New-Beginning-Wallpaper-2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+body, main {
+	height: 100%;
+}
+
+.cd-fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.cd-scrolling-bg {
+	min-height: 100%;
+}
+.cd-fixed-bg.body {
+    background: url(http://theartmad.com/wp-content/uploads/2015/07/New-Beginning-Wallpaper-2.jpg)
+}
+   a{
+       text-decoration:none;
+       color: white;
+   }
+   a:link{
+           color: white;
+           
+       }
+.but2 {
+    background-color: orange;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 90%;
+    display: inline-block;
+}
+.but2:hover {
+    background-color: red;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+} 
+.dp.img.expand { 
+	width: 10em; 
+}
+.dp{
+	padding: 30px;
+	text-indent: 20px;
+	text-indent: 20px;
+	text-decoration: overline;
+    	font-family: sans-serif;
+	color: lightgoldenrodyellow;
+}
+.ab{
+	padding-left: 10px;
+	height: 270px;
+  	width: 310px;
+  	border-radius: 11px;
+  	background: #ccc;
+  	background: rgba(0, 0, 0, .2);
+  	margin-left: 30;
+	color: burlywood;
+	
+}
+.end{
+	
+	    margin-left: 40%;
+   	    border-radius: 11px;
+    	margin-bottom: 10;
+    	color: burlywood;
+    	text-indent: 5px;
+}
