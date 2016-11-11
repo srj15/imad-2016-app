@@ -189,9 +189,14 @@ a {
   color: white;
 }
 .cd-fixed-bg.cd-bg-1 {
+  background-image: url("/ui/DSC_7027.JPG");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("/ui/DSC_6999.JPG");
+}
+.cd-fixed-bg.cd-bg-3{
   background-image: url("/ui/DSC_5376.JPG");
 }
-
 @media only screen and (min-width: 768px) {
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
     font-size: 36px;
