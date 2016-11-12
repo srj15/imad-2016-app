@@ -1,165 +1,148 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,200,300,900);
-
-$colors: #E89B35 #36CBE9 #A137E7 #E83568;
-
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-background: linear-gradient(135deg,  #0e7fef 0%,#00a7c9 44%,#00d3a2 100%), linear-gradient(45deg, rgba(242,14,109,1) 0%,rgba(242,14,109,0.93) 7%,rgba(0,211,162,0) 100%);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip0057 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 380px;
+  max-width: 480px;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
 }
-
-h1, h2, h3, h4, h5, h6, p {  font-family: inherit; }
-
-a {
-  color: rgba(0,0,0,0.4);
-  transition: color 0.35s ease-in-out;
-  &:hover { color: #00a7c9; }
+figure.snip0057 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
-
-.card {
+figure.snip0057 .image {
+  width: 50%;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+}
+figure.snip0057 .image img {
+  position: relative;
+  display: block;
+  left: -15%;
+  z-index: 1;
+  -webkit-transform: skew(15deg);
+  transform: skew(15deg);
+}
+figure.snip0057:before {
   position: absolute;
+  content: '';
+  height: 100%;
+  width: 45%;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transform: skewX(-17deg);
+  transform: skewX(-17deg);
+  -webkit-box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.7);
+  box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.7);
+}
+figure.snip0057 figcaption {
+  padding: 20px 30px 20px 20px;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 50%;
+}
+figure.snip0057 figcaption h2,
+figure.snip0057 figcaption p {
+  margin: 0;
+  text-align: right;
+  padding: 10px 0;
+  width: 100%;
+}
+figure.snip0057 figcaption h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+figure.snip0057 figcaption h2 span {
+  font-weight: 800;
+}
+figure.snip0057 figcaption p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+figure.snip0057 figcaption .icons {
+  width: 100%;
+  text-align: right;
+}
+figure.snip0057 figcaption .icons i {
+  font-size: 26px;
+  padding: 5px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  @media only screen and (max-width: 768px) {
-     width: 18rem;
+  color: #000000;
+  opacity: 0;
+}
+figure.snip0057 figcaption a {
+  opacity: 0.3;
+}
+figure.snip0057 figcaption a:hover {
+  opacity: 0.8;
+}
+figure.snip0057 .position {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 15px 30px;
+  font-size: 0.9em;
+  opacity: 1;
+  font-style: italic;
+  color: #ffffff;
+  background: #000000;
+}
+figure.snip0057.blue .position {
+  background: #20638f;
+}
+figure.snip0057.red .position {
+  background: #962d22;
+}
+figure.snip0057.yellow .position {
+  background: #bf6516;
+}
+figure.snip0057:hover figcaption,
+figure.snip0057.hover figcaption {
+  bottom: 40px;
+}
+figure.snip0057:hover .icons i,
+figure.snip0057.hover .icons i {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip0057:hover:before,
+figure.snip0057.hover:before {
+  -webkit-animation: shadow 0.6s ease-in-out;
+  animation: shadow 0.6s ease-in-out;
+}
+@-webkit-keyframes shadow {
+  0% {
+    left: 0px;
   }
- 
-  
-  .panel {
-    transition: all 0.35s ease-in-out;
-    padding: 1.5rem 2rem;
-    /* position: absolute; */
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: hidden;
+  50% {
+    left: -5px;
   }
-  
-  .meta {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    margin: 0;
-    position: relative;
-    text-align: center;
-    transform: translateX(0);
-    padding: 2rem 4rem;
-    border-right: 1px solid transparent;
-    
-    picture {
-      position: relative;
-      display: inline-block;
-    }
-    
-    img {
-       object-fit: cover; 
-    }
-    .avatar { 
-      border-radius: 50%;
-    }
-
-    .company-logo {
-      position: absolute;
-      bottom: -0.5rem;
-      right: 0;
-    }
-    .name {
-      font-size: 2rem;
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: 300;
-    }
-    
-    .title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 1rem 0 0;
-    }
+  100% {
+    left: 0px;
   }
-  
-  .info {
-
-    
-    @media only screen and (min-width: 768px) {
-        transform: translateY(0);
-        top: 0;
-        left: 0;
-        z-index: 0;
-        position: absolute;
-    }
-    
-    dt {
-      margin: 0;
-      padding: 1rem 0;
-       &:first-child {
-        padding-top: 0;
-      }
-      &:after {
-        width: 100%;
-        background-color: #e0e0e0;
-        height: 0.5rem;
-        content: "";
-        display: block;
-      }
-    }
-    
-    dd {
-      width: 100%;
-      height: 0.5rem;
-      position: relative;
-      right: 0;
-      margin: -1.5rem 0 0;
-      /* background-color: nth($colors, 1); */
-      overflow: hidden;
-      text-indent: -1000px;
-      
-      @for $i from 1 through length($colors) {
-        &:nth-child(#{$i*2}) {
-          background-color: nth($colors, $i);
-        }
-      }
-    }
+}
+@keyframes shadow {
+  0% {
+    left: 0px;
   }
-  
-  .social {
-    list-style: none;
-    margin: 0;
-    text-align: center;
-    
-    li { 
-      display: inline-block;
-      a {
-        display: block;
-        overflow: hidden;
-        text-indent: -1000px;
-        height: 1em;
-        font-size: 1.8rem;
-        padding: 0.1em;
-        margin: 0 0.1em;
-
-        &:before {
-          display: block;
-          text-indent: 0;
-          font-size: 1em;
-        }
-      }
-    }
+  50% {
+    left: -5px;
   }
-  
-  @media only screen and (min-width: 768px) {
-      &:hover {
-    .meta { 
-      transform: translateX(-69.5%); 
-      border-color: #00a7c9;
-    }
-    .info {
-      transform: translateX(20%);
-      width: 150%;
-    }
+  100% {
+    left: 0px;
   }
-  }
-  
 }
