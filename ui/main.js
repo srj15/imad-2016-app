@@ -192,8 +192,6 @@ function loadArticles () {
     request.open('GET', '/get-articles', true);
     request.send(null);
 }
-
-
 // The first thing to do is to check if the user is logged in!
 loadLogin();
 
