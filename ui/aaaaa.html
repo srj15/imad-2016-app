@@ -120,7 +120,11 @@
       <li><a class="icon-social-dribbble" href="https://dribbble.com/biggles">Dribbble</a></li>
       <li><a class="icon-social-medium" href="#">Medium</a></li>
     </ul>
-    
+    <script>
+        $('.info dd').each(function() {
+        $(this).css({width: $(this).text()+'%'});
+        });
+    </script>
   </div>
   
 </section>
