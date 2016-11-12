@@ -19,7 +19,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret: 'someRandomSecretValue',
-    cookie: { maxAge: 1000 * 60 * 60 * 24 }
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 
 function createTemplate (data) {
@@ -150,7 +150,7 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
-   res.send('<html><body>You are Logged out.<br/><br/><a href="/">Back to home</a></body></html>');
+   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
 var pool = new Pool(config);
