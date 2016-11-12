@@ -86,214 +86,26 @@
 
 <section id="about">				
 
-<style>
-    @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,200,300,900);
 
-$colors: #E89B35 #36CBE9 #A137E7 #E83568;
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-background: linear-gradient(135deg,  #0e7fef 0%,#00a7c9 44%,#00d3a2 100%), linear-gradient(45deg, rgba(242,14,109,1) 0%,rgba(242,14,109,0.93) 7%,rgba(0,211,162,0) 100%);
-}
-
-h1, h2, h3, h4, h5, h6, p {  font-family: inherit; }
-
-a {
-  color: rgba(0,0,0,0.4);
-  transition: color 0.35s ease-in-out;
-  &:hover { color: #00a7c9; }
-}
-
-.card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  @media only screen and (max-width: 768px) {
-     width: 18rem;
-  }
- 
-  
-  .panel {
-    transition: all 0.35s ease-in-out;
-    padding: 1.5rem 2rem;
-    /* position: absolute; */
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: hidden;
-  }
-  
-  .meta {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    margin: 0;
-    position: relative;
-    text-align: center;
-    transform: translateX(0);
-    padding: 2rem 4rem;
-    border-right: 1px solid transparent;
-    
-    picture {
-      position: relative;
-      display: inline-block;
-    }
-    
-    img {
-       object-fit: cover; 
-    }
-    .avatar { 
-      border-radius: 50%;
-    }
-
-    .company-logo {
-      position: absolute;
-      bottom: -0.5rem;
-      right: 0;
-    }
-    .name {
-      font-size: 2rem;
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: 300;
-    }
-    
-    .title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 1rem 0 0;
-    }
-  }
-  
-  .info {
-
-    
-    @media only screen and (min-width: 768px) {
-        transform: translateY(0);
-        top: 0;
-        left: 0;
-        z-index: 0;
-        position: absolute;
-    }
-    
-    dt {
-      margin: 0;
-      padding: 1rem 0;
-       &:first-child {
-        padding-top: 0;
-      }
-      &:after {
-        width: 100%;
-        background-color: #e0e0e0;
-        height: 0.5rem;
-        content: "";
-        display: block;
-      }
-    }
-    
-    dd {
-      width: 100%;
-      height: 0.5rem;
-      position: relative;
-      right: 0;
-      margin: -1.5rem 0 0;
-      /* background-color: nth($colors, 1); */
-      overflow: hidden;
-      text-indent: -1000px;
-      
-      @for $i from 1 through length($colors) {
-        &:nth-child(#{$i*2}) {
-          background-color: nth($colors, $i);
-        }
-      }
-    }
-  }
-  
-  .social {
-    list-style: none;
-    margin: 0;
-    text-align: center;
-    
-    li { 
-      display: inline-block;
-      a {
-        display: block;
-        overflow: hidden;
-        text-indent: -1000px;
-        height: 1em;
-        font-size: 1.8rem;
-        padding: 0.1em;
-        margin: 0 0.1em;
-
-        &:before {
-          display: block;
-          text-indent: 0;
-          font-size: 1em;
-        }
-      }
-    }
-  }
-  
-  @media only screen and (min-width: 768px) {
-      &:hover {
-    .meta { 
-      transform: translateX(-69.5%); 
-      border-color: #00a7c9;
-    }
-    .info {
-      transform: translateX(20%);
-      width: 150%;
-    }
-  }
-  }
-  
-}
-
-</style>
-
-<section class="card">
-  <figure class="panel meta">
-    <picture>
-      <img class="avatar" src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/11146278_842570732447270_2914745970522714649_n.jpg?oh=a0ca940e96ccf048bb93fb8fa4238b5e&oe=589B072C" width="128" height="128"/>
-      <img class="company-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/67516/b-01.png" alt="BigglesCodes" width="40" height="40"/>
-    </picture>
-    <figcaption>
-
-      <h1 class="name">Sooraj Krish</h1>
-      <h3 class="title">Web Developer-Beginner</h3>
-    </figcaption>
-  </figure>
-  
-  <div class="panel info">
-    <dl class="skill">
-      <dt>CSS</dt>
-      <dd>75</dd>
-      <dt>Javascript</dt>
-      <dd>50</dd>
-      <dt>PHP</dt>
-      <dd>25</dd>
-      <dt>Html</dt>
-      <dd>85</dd>
-    </dl>
-    
-    <ul class="social">
-      <li><a class="icon-social-twitter" href="https://twitter.com/iamsooraj15">Twitter</a></li>
-      <li><a class="icon-social-github" href="https://github.com/srj15">Github</a></li>
-      <li><a class="icon-social-stack-overflow" href="http://stackoverflow.com/users/7140721/sooraj-g">StackOverflow</a></li>
-      <li><a class="icon-social-facebook" href="https://www.facebook.com/sooraj15">Facebook</a></li>
-      <li><a class="icon-social-medium" href="#">Medium</a></li>
-    </ul>
-    <script>
-        $('.info dd').each(function() {
-        $(this).css({width: $(this).text()+'%'});
-        });
-    </script>
-  </div>
-</section>
+<figure class="snip0057 red">
+  <figcaption>
+    <h2>Victoria <span>Pena</span></h2>
+    <p>A voice crackles in Calvin's radio: "Enemy fighters at two o'clock!" "Roger. What should I do until then?"</p>
+    <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
+  </figcaption>
+  <div class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sample4"/></div>
+  <div class="position">Illustrator</div>
+</figure>
+<figure class="snip0057 blue">
+  <figcaption>
+    <h2>Tiffany <span>Case</span></h2>
+    <p>That's the whole problem with science. You've got a bunch of empiricists trying to describe things of unimaginable wonder.</p>
+    <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
+  </figcaption>
+  <div class="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg" alt="sample3"/></div>
+  <div class="position">Software Engineer</div>
+</figure>
 
 
 
